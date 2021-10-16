@@ -12,4 +12,4 @@ mapped = map(lambda x : '{:,}'.format(x), mylist)
 mylist = list(mapped)
 end = time.time()
 
-print(f"{(end-start)*1000}ms")
+print(f"{round((end-start)*1000, 3)}ms")

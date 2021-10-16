@@ -26,8 +26,11 @@ func main() {
 		strings = append(strings, s)
 	}
 	
-	fmt.Println(strings[99999])
 	duration := time.Since(start)
+	div := float64(1000)
+	micros := float64(duration.Microseconds())
+	duration_ms := float64(micros / div)
 
-	fmt.Println(duration)
+	// fmt.Println(duration)
+	fmt.Printf("%.3fms", duration_ms) 
 }

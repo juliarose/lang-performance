@@ -1,5 +1,5 @@
 **/target
-go/**/*.sum
+go/**/main
 
 debug/
 target/

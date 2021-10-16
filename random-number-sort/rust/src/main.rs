@@ -7,7 +7,7 @@ fn main() {
     let now = Instant::now();
     
     let mut rng = rand::thread_rng();
-    let values = sorted(
+    let _values = sorted(
         (0..100000)
             .map(|_| rng.gen_range(0..100000))
     )
