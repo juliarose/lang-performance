@@ -1,10 +1,10 @@
-# Tests
+## Tests
 * [random-number-sort](/random-number-sort)
 
+## Results
 Testing on AMD Ryzen 9 5900X 12-Core Processor
 
-## random-number-sort
-
+### random-number-sort
 | Language | Time |
 | --- | --- |
 | rust | 9.892ms |
