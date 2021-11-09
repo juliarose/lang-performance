@@ -63,5 +63,7 @@ int main () {
         strcpy(thousands_numbers[i], str);
     }
     
+    free(numbers);
+    
     return 0;
 }
