@@ -4,7 +4,7 @@
 #include <time.h>
 #include <locale.h>
 
-void quicksort(int number[100000], int first, int last) {
+void quicksort(int number[1000000], int first, int last) {
     int i, j, pivot, temp;
     
     if (first < last) {
@@ -37,29 +37,30 @@ void quicksort(int number[100000], int first, int last) {
 }
 
 int main () {
-    int n = 100000;
-    int numbers [n];
-    int a;
+    int n = 1000000;
+    int* numbers = malloc(n * sizeof(int));
+    int i;
     
     time_t t;
     srand((unsigned) time(&t));
     setlocale(LC_NUMERIC, "");
     
     // generate n random numers ranging from 0 to n
-    for (a = 0; a < n; a = a + 1) {
-        numbers[a] = rand() % n;
+    for (i = 0; i < n; i = i + 1) {
+        numbers[i] = rand() % n;
     }
     
     // sort from lowest to highest
     quicksort(numbers, 0, n);
     
-    char thousands_numbers [n][9];
+    char *thousands_numbers[n];
     
     // convert each number to a string with thousands separators (e.g. 100,000)
-    for (a = 0; a < n; a = a + 1) {
-        char str[9];
-        sprintf(str, "%'d", numbers[a]);
-        strcpy(thousands_numbers[a], str);
+    for (i = 0; i < n; i = i + 1) {
+        char str[12];
+        sprintf(str, "%'d", numbers[i]);
+        thousands_numbers[i] = (char *)malloc(sizeof(char[12]));
+        strcpy(thousands_numbers[i], str);
     }
     
     return 0;

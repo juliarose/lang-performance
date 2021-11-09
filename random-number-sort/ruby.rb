@@ -15,8 +15,8 @@ end
 
 start = Time.now
 
-arr = Array.new(100000)
-    .map { rand(1...100000) }
+arr = Array.new(1000000)
+    .map { rand(1...1000000) }
     .sort
     .map { |n| to_thousands(n) }
 

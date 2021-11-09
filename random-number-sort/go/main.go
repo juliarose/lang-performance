@@ -13,15 +13,15 @@ func main() {
 
 	var mylist []int
 
-	for i := 0; i < 100000; i++ {
-		mylist = append(mylist, rand.Intn(100000))
+	for i := 0; i < 1000000; i++ {
+		mylist = append(mylist, rand.Intn(1000000))
 	}
 
 	sort.Ints(mylist)
 	
 	var strings []string
 	
-	for i := 0; i < 100000; i++ {
+	for i := 0; i < 1000000; i++ {
 		s, _ := thousands.Separate(mylist[i], "en")
 		strings = append(strings, s)
 	}

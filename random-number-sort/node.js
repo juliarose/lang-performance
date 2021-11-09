@@ -1,7 +1,7 @@
 const start = process.hrtime.bigint();
-new Array(100000)
+new Array(1000000)
     .fill(0)
-    .map(() => Math.round(Math.random() * 100000))
+    .map(() => Math.round(Math.random() * 1000000))
     .sort()
     .map(value => value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ','));
 const end = process.hrtime.bigint();

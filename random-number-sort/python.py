@@ -4,8 +4,8 @@ import random
 start = time.time()
 mylist = []
 
-for _ in range(100000):
-    mylist.append(random.randint(0, 100000))
+for _ in range(1000000):
+    mylist.append(random.randint(0, 1000000))
 
 mylist.sort()
 mapped = map(lambda x : '{:,}'.format(x), mylist)

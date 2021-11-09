@@ -8,8 +8,8 @@ fn main() {
     
     let mut rng = rand::thread_rng();
     let _values = sorted(
-        (0..100000)
-            .map(|_| rng.gen_range(0..100000))
+        (0..1000000)
+            .map(|_| rng.gen_range(0..1000000))
     )
             .map(|a| a.separate_with_commas())
             .collect::<Vec<String>>();
