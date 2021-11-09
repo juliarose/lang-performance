@@ -22,7 +22,7 @@ void quicksort(int number[1000000], int first, int last) {
             }
             
             if (i < j) {
-                temp=number[i];
+                temp = number[i];
                 number[i] = number[j];
                 number[j] = temp;
             }
@@ -38,14 +38,14 @@ void quicksort(int number[1000000], int first, int last) {
 
 int main () {
     int n = 1000000;
-    int* numbers = malloc(n * sizeof(int));
+    int *numbers = malloc(n * sizeof(int));
     int i;
     
     time_t t;
     srand((unsigned) time(&t));
     setlocale(LC_NUMERIC, "");
     
-    // generate n random numers ranging from 0 to n
+    // generate n random numbers ranging from 0 to n
     for (i = 0; i < n; i = i + 1) {
         numbers[i] = rand() % n;
     }
@@ -57,9 +57,9 @@ int main () {
     
     // convert each number to a string with thousands separators (e.g. 100,000)
     for (i = 0; i < n; i = i + 1) {
-        char str[12];
+        char str[10];
         sprintf(str, "%'d", numbers[i]);
-        thousands_numbers[i] = (char *)malloc(sizeof(char[12]));
+        thousands_numbers[i] = (char *)malloc(sizeof(char[10]));
         strcpy(thousands_numbers[i], str);
     }
     
