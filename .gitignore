@@ -1,6 +1,6 @@
 **/target
 go/**/main
-
+**/.julia
 debug/
 target/
 
