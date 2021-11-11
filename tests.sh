@@ -30,6 +30,12 @@ for FOLDER in */; do
         fi
     fi
     
+    if test -f "$FOLDER/java.java"; then
+        if [ ! -f "$FOLDER/Java.class" ]; then
+            javac "$FOLDER/java.java"
+        fi
+    fi
+    
     for i in $(seq $count); do
         if test -f "$FOLDER/node.js"; then
             num=$(node "$FOLDER/node.js")
@@ -40,6 +46,20 @@ for FOLDER in */; do
                 tests[node]=`echo "$prev + $num" | bc`
             else
                 tests[node]=$num
+            fi
+        fi
+        
+        if test -f "$FOLDER/java.java"; then
+            cd "$FOLDER/"
+            num=$(java Java)
+            num=$(trim_ms $num)
+            cd - > /dev/null
+            
+            if [[ -v tests[java] ]]; then
+                prev="${tests[java]}"
+                tests[java]=`echo "$prev + $num" | bc`
+            else
+                tests[java]=$num
             fi
         fi
         
