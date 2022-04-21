@@ -1,8 +1,7 @@
+const STR: &str = "            The President of the United States   ";
+
 fn main() {
     let now = std::time::Instant::now();
-    for _i in 0..1000000 {
-        let s = "            The President of the United States   ";
-        let _trimmed = s.trim();
-    }
+    let _trimmed = (0..1000000).map(|_i| STR.trim()).collect::<Vec<&str>>();
     println!("{}ms", now.elapsed().as_micros() as f32 / 1000.0);
 }

@@ -1,7 +1,8 @@
 const start = process.hrtime.bigint();
-
+let str = "            The President of the United States   ";
+let strs = [];
 for (let i = 0; i < 1000000; i++) {
-    let trimmed = "            The President of the United States   ".trim();
+    strs.push(str.trim());
 }
 
 const end = process.hrtime.bigint();
