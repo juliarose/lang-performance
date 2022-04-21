@@ -150,4 +150,6 @@ for FOLDER in */; do
         printf '%s%*.*s%s\n' "$key:" 0 $((padlength - ${#key} - ${#time} )) "$pad" "$time"
         # echo "$key - ${tests[$key]}"
     done | sort -k3 -t ':' +1n -r
+    
+    unset tests
 done
