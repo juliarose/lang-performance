@@ -1,5 +1,6 @@
 ## Tests
 * [random-number-sort](/random-number-sort)
+* [string-trim](/string-trim)
 
 ## Results
 Testing on AMD Ryzen 9 5900X 12-Core Processor
@@ -15,5 +16,3 @@ Testing on AMD Ryzen 9 5900X 12-Core Processor
 | node | 523.36 |
 | java | 559.20 |
 | python | 801.34 |
-
-Most of the code here serves more as a "for fun" purpose. If anyone happens to be reading this and can provide more efficient solutions to the problems, don't hesitate to open an issue.
