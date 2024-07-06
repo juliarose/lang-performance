@@ -10,7 +10,7 @@ fn main() {
         .map(|_| rng.gen_range(0..1000000))
         .collect::<Vec<u32>>();
     
-    values.sort();
+    values.sort_unstable();
     
     let _values = values
         .iter()
