@@ -1,4 +1,4 @@
-module go
+module go-random-number-sort
 
 go 1.17
 
