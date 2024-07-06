@@ -12,6 +12,7 @@ Testing on AMD Ryzen 9 5900X 12-Core Processor
 
 ### [random-number-sort]((/random-number-sort))
 | Language | Time (ms) |
+| -------- | --------- |
 | rust     | 109.91    |
 | c        | 151.00    |
 | go       | 308.40    |
