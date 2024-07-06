@@ -3,6 +3,7 @@
 #include <string.h>
 #include <time.h>
 #include <locale.h>
+#include <limits.h>
 
 void quicksort(int *numbers, int first, int last) {
     int i, j, pivot, temp;
@@ -36,6 +37,21 @@ void quicksort(int *numbers, int first, int last) {
     }
 }
 
+int numPlaces(int n) {
+    if (n < 0) n = (n == INT_MIN) ? INT_MAX : -n;
+    if (n < 10) return 1;
+    if (n < 100) return 2;
+    if (n < 1000) return 3;
+    if (n < 10000) return 4;
+    if (n < 100000) return 5;
+    if (n < 1000000) return 6;
+    if (n < 10000000) return 7;
+    if (n < 100000000) return 8;
+    if (n < 1000000000) return 9;
+    
+    return 10;
+}
+
 int main () {
     time_t t;
     srand((unsigned) time(&t));
@@ -57,12 +73,16 @@ int main () {
     
     // convert each number to a string with thousands separators (e.g. 100,000)
     for (i = 0; i < n; i = i + 1) {
-        char str[10];
-        sprintf(str, "%'d", numbers[i]);
-        thousands_numbers[i] = malloc(sizeof(char) * 10);
-        strcpy(thousands_numbers[i], str);
+        int digits = numPlaces(numbers[i]);
+        int num_commas = (digits - 1) / 3;
+        // number of digits, number of commas, and null terminator
+        int len = digits + num_commas + 1;
+        
+        thousands_numbers[i] = malloc(sizeof(char) * len);
+        snprintf(thousands_numbers[i], 10, "%'d", numbers[i]);
     }
     
+    // printf("%s\n", thousands_numbers[n / 2]);
     // free the memory
     free(numbers);
     
