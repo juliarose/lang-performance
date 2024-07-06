@@ -28,3 +28,4 @@ Testing on AMD Ryzen 9 5900X 12-Core Processor
 | -------- | --------- |
 | rust     | 16.32     |
 | node     | 107.34    |
+| elixir   | 418.21    |

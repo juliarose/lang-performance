@@ -10,9 +10,9 @@ import (
 
 func main() {
 	start := time.Now()
-
+	
 	var mylist []int
-
+	
 	for i := 0; i < 1000000; i++ {
 		mylist = append(mylist, rand.Intn(1000000))
 	}
@@ -30,7 +30,7 @@ func main() {
 	div := float64(1000)
 	micros := float64(duration.Microseconds())
 	duration_ms := float64(micros / div)
-
+	
 	// fmt.Println(duration)
 	fmt.Printf("%.3fms", duration_ms) 
 }
