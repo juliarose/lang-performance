@@ -1,10 +1,10 @@
 defmodule StringTrim do
-  def create_list() do
-    Stream.repeatedly(fn -> String.trim("            The President of the United States   ") end)
-    |> Enum.take(1_000_000)
+  def create_list(s) do
+    for _ <- 1..1_000_000, do: String.trim(s)
   end
 end
 
-{time_in_microseconds, _ret_val} = :timer.tc(&StringTrim.create_list/0)
+s = "            The President of the United States   "
+{time_in_microseconds, _ret_val} = :timer.tc(fn -> StringTrim.create_list(s) end)
 
 IO.puts("#{time_in_microseconds / 1_000}ms")

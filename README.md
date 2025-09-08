@@ -13,19 +13,19 @@ Testing on AMD Ryzen 9 5900X 12-Core Processor
 ### [random-number-sort]((/random-number-sort))
 | Language | Time (ms) |
 | -------- | --------- |
-| rust     | 89.95    |
-| c        | 151.00    |
-| go       | 308.40    |
-| elixir   | 377.03    |
-| julia    | 408.80    |
-| ruby     | 494.27    |
-| java     | 582.40    |
-| node     | 592.86    |
-| python   | 852.99    |
+| rust     | 74.96     |
+| c        | 144.60    |
+| go       | 310.78    |
+| elixir   | 414.85    |
+| julia    | 422.00    |
+| ruby     | 499.67    |
+| node     | 613.30    |
+| java     | 682.80    |
+| python   | 1205.34   |
 
 ### [string-trim](/string-trim)
 | Language | Time (ms) |
 | -------- | --------- |
-| rust     | 16.32     |
-| node     | 107.34    |
-| elixir   | 418.21    |
+| rust     | 11.27     |
+| node     | 150.72    |
+| elixir   | 433.68    |
