@@ -27,5 +27,6 @@ Testing on AMD Ryzen 9 5900X 12-Core Processor
 | Language | Time (ms) |
 | -------- | --------- |
 | rust     | 11.27     |
+| c        | 16.40     |
 | node     | 150.72    |
 | elixir   | 433.68    |
