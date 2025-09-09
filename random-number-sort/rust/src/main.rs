@@ -5,9 +5,9 @@ use thousands::Separable;
 fn main() {
     let now = Instant::now();
     
-    let mut rng = rand::thread_rng();
+    let mut rng = rand::rng();
     let mut values = (0..1000000)
-        .map(|_| rng.gen_range(0..1000000))
+        .map(|_| rng.random_range(0..1000000))
         .collect::<Vec<u32>>();
     
     values.sort_unstable();
